@@ -32,8 +32,10 @@ h1{font-size:28px}h2{font-size:20px;margin-top:32px}blockquote{border-left:3px s
 <p>most a few seconds, and discards them when the session ends. The timestamps are</p>
 <p>never written to disk.</p>
 
-<p>Scrubook never observes input directed at any other application. It holds</p>
-<p>no Accessibility or Input Monitoring permission, so it has no way to.</p>
+<p>Scrubook never observes input directed at any other application and holds no</p>
+<p>Input Monitoring permission. The Accessibility permission is optional: if you</p>
+<p>grant it, Scrubook uses it only while a session is running, only to stop</p>
+<p>function and media keys, and discards those key presses without inspecting them.</p>
 
 <h2>What is stored on your Mac</h2>
 
