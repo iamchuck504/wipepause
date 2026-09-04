@@ -33,9 +33,9 @@ h1{font-size:28px}h2{font-size:20px;margin-top:32px}blockquote{border-left:3px s
 <p>never written to disk.</p>
 
 <p>Scrubook never observes input directed at any other application and holds no</p>
-<p>Input Monitoring permission. The Accessibility permission is optional: if you</p>
-<p>grant it, Scrubook uses it only while a session is running, only to stop</p>
-<p>function and media keys, and discards those key presses without inspecting them.</p>
+<p>Input Monitoring permission. It asks for the Accessibility permission, and uses</p>
+<p>it only while a session is running, only to stop keys (including function and</p>
+<p>media keys), discarding those key presses without inspecting them.</p>
 
 <h2>What is stored on your Mac</h2>
 
@@ -46,16 +46,17 @@ h1{font-size:28px}h2{font-size:20px;margin-top:32px}blockquote{border-left:3px s
 
 <h2>Permissions</h2>
 
-<p>By default Scrubook requests no system permissions. Its only entitlement is the</p>
-<p>App Sandbox.</p>
+<p>Scrubook asks for one system permission: Accessibility. It is requested on</p>
+<p>first launch (and again on later launches until granted), because macOS handles</p>
+<p>brightness, volume, media and similar keys before any app sees them, and the</p>
+<p>lock cannot stop them without it. Its only entitlement is the App Sandbox.</p>
 
-<p>One optional setting — <em>Also block function and media keys</em> — asks for the</p>
-<p>Accessibility permission, because macOS handles brightness, volume and media</p>
-<p>keys before any app sees them. When you turn it on, Scrubook drops those key</p>
-<p>events only while a cleaning session is running, and looks at exactly one thing:</p>
-<p>whether a key is Esc, so the emergency unlock keeps working. It still reads,</p>
-<p>records and transmits nothing. Turn the setting off, or remove Scrubook from</p>
-<p>Accessibility in System Settings, and the app behaves as before.</p>
+<p>With the permission granted, Scrubook drops key events only while a cleaning</p>
+<p>session is running, and looks at exactly one thing: whether a key is Esc, so</p>
+<p>the emergency unlock keeps working. It still reads, records and transmits</p>
+<p>nothing. Without the permission the app still works, but function and media</p>
+<p>keys stay active during a session; you can remove Scrubook from Accessibility</p>
+<p>in System Settings at any time.</p>
 
 <h2>Children</h2>
 
